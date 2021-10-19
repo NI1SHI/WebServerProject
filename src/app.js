@@ -7,6 +7,7 @@ const forecast=require('./utils/forecast')
 console.log(__dirname)
 console.log(path.join(__dirname,'../public'))
 const app= express()
+const port=process.env.PORT || 3000
 const publicDirectory=path.join(__dirname,'../public')
 const viewTemplates=path.join(__dirname,'../Templates/views')
 const viewPartial=path.join(__dirname,'../Templates/partials')
@@ -83,7 +84,7 @@ app.get('/*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>
+app.listen(port,()=>
 {
     console.log('Server is upon the port 3000')
 })
