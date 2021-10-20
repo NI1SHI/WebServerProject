@@ -10,7 +10,7 @@ const forecast=(lattitude,longitude,callback)=>{
                 callback('please provide valid address',undefined)
             }
             else{
-            callback(undefined,body.current.weather_descriptions[0]+'. it is currently'+body.current.temperature+'degrees out,there is'+ body.current.precip+'% chance of rain')
+            callback(undefined,body.current.weather_descriptions[0]+'. it is currently'+body.current.temperature+'degrees out,there is'+ body.current.precip+'% chance of rain and humidity will be'+body.current.humidity)
             }
         })
 
